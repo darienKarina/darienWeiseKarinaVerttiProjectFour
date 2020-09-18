@@ -34,8 +34,20 @@ movieQuizApp.getResults = () => {
         // second movie
         const secondMovie = movieQuizApp.randomMovie(res.results)
         console.log(secondMovie);
-    }
-    )
+
+        // console.log(firstMovie.popularity);
+        // console.log(secondMovie.popularity);
+
+        if (firstMovie === secondMovie) {
+            movieQuizApp.randomMovie();
+        } else if(firstMovie.popularity > secondMovie.popularity) {
+            console.log('yes!');
+        } else {
+            console.log('no');
+        }
+        // this if statement is comparing if (popularity of first movie) is higher than (popularity of second movie)
+
+    })
 }
 movieQuizApp.randomMovie = (array) => {
     const randomIndex = Math.floor(Math.random() * array.length);
@@ -44,8 +56,7 @@ movieQuizApp.randomMovie = (array) => {
 // Create an if statement that prevents two movies with same title
 // let i = (res.title)
 // if (i === i) then run random movie again until result is different
-
-
+// let userScore = 0;
 // Create an event listener for a 'click' event in the movie buttons
 // Save information from user choice into a variable
 // Determine if user choice is correct or not
