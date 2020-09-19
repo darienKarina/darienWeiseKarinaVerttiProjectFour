@@ -36,13 +36,25 @@ movieQuizApp.getResults = () => {
         
         // console.log(firstMovie.popularity);
         // console.log(secondMovie.popularity);
-        
+        const moviePair = 
+
         if (firstMovie === secondMovie) {
-            movieQuizApp.randomMovie();
+        movieQuizApp.randomMovie();
         } else if(firstMovie.popularity > secondMovie.popularity) {
-            console.log('yes!');
+        console.log('yes!');
         } else {
-            console.log('no');
+        console.log('no');
+        }
+
+        var $img = $("<img />").attr('src', data.results[0].image_url_760x100);
+    $('#ShopBanner').empty().append($img);
+    
+        const toDisplay = () => {
+        $('.movie1').click(function(){
+            $('.button').on('click', function(){
+            $(this).html()
+            })
+            })
         }
         // to make button click and do something $(.movie1).on('click', )
 
@@ -51,13 +63,6 @@ movieQuizApp.getResults = () => {
         // Display 2 random movies generated from a random item function
         // to make results appear
         // to make results appear
-    const showResults = () => {
-        $('.movie1').click(function(){
-        $('.button').on('click', function(){
-        $(this).css('background-image', posterPath)
-        })
-        })
-    }
 
         // const toDisplay = randomMovie(babies[accomplice]);
         // $('.results').html(`
