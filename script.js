@@ -24,7 +24,6 @@ movieQuizApp.getResults = () => {
         console.log(res.results);
         // movieQuizApp.getResults(res);
 
-        // Display 2 random movies generated from a random item function
         // Create a function that grabs a random item from an array
         // get image only
         // get movie title
@@ -34,10 +33,10 @@ movieQuizApp.getResults = () => {
         // second movie
         const secondMovie = movieQuizApp.randomMovie(res.results)
         console.log(secondMovie);
-
+        
         // console.log(firstMovie.popularity);
         // console.log(secondMovie.popularity);
-
+        
         if (firstMovie === secondMovie) {
             movieQuizApp.randomMovie();
         } else if(firstMovie.popularity > secondMovie.popularity) {
@@ -45,8 +44,26 @@ movieQuizApp.getResults = () => {
         } else {
             console.log('no');
         }
+        // to make button click and do something $(.movie1).on('click', )
+
         // this if statement is comparing if (popularity of first movie) is higher than (popularity of second movie)
 
+        // Display 2 random movies generated from a random item function
+        // to make results appear
+        // to make results appear
+    const showResults = () => {
+        $('.movie1').click(function(){
+        $('.button').on('click', function(){
+        $(this).css('background-image', posterPath)
+        })
+        })
+    }
+
+        // const toDisplay = randomMovie(babies[accomplice]);
+        // $('.results').html(`
+        // <p class="choice">${toDisplay.name}</p>
+        // <img src="${toDisplay.url}" alt="${toDisplay.alt}">
+        // `);
     })
 }
 movieQuizApp.randomMovie = (array) => {

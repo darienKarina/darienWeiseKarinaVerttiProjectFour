@@ -1,17 +1,37 @@
 @import "setup";
-
-
 // $headingFont: 'Shadows Into Light', cursive;
 // $baseFont: 'Gayathri', sans-serif;
-
 
 // $highlight: #89CFF0;
 // $shadows:#d3d3d3;
 
 // WRITE HERE
+    .wrapper {
+    margin: 10vh auto;
+    
+    }
 
+    body {
+    background-color: lightgray;
+    
+    h1,
+    footer {
+        text-align: center;
+    }
+    }
 
-
+    .movie {
+    display: flex;
+    justify-content: space-around;
+    
+    .movie1,
+    .movie2 {
+        background-color: darkcyan;
+        width: 240px;
+        height: 360px;
+        margin: 5px 0;
+    }
+    }
 
 
 
