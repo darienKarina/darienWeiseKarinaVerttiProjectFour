@@ -18,7 +18,7 @@ movieQuizApp.getResults = () => {
             sort_by: "popularity.desc",
             // Figure out how to get just one page
             page: 1,
-        }
+         }
     }).then((res) => {
 
         console.log(res.results);
@@ -31,8 +31,6 @@ movieQuizApp.getResults = () => {
             'alt': firstMovie.title
         });
         $('.firstMovieTitle').text(firstMovie.title);
-
-        
         console.log(firstMovie);
 
         const secondMovie = movieQuizApp.randomMovie(res.results)
@@ -41,46 +39,61 @@ movieQuizApp.getResults = () => {
             'alt': secondMovie.title
         });
         $('.secondMovieTitle').text(secondMovie.title);
-
         console.log(secondMovie);
-        
-        // user clicks on button
-        $('button').on('click', function(){
-            const selectedMovie = $(this);
-            const buttonSelected = $(this);
-            // console.log(buttonSelected.attr(‘id’))
-
-
-
-            // console.log(selectedMovie.attr('id'));
-            // console.log(movieQuizApp.selectedMovie.attr('id'));
-
-            if (selectedMovie === 'movie1' && firstMovie.popularity > secondMovie.popularity) {
-                console.log('yes!');
-            } else {
-                console.log('no');
+      
+      ////////// NEXT TWO functions for user results of clicked movie ////////
+      // 
+      // when user clicks on #movie1
+      $('#movie1').on('click', function(){
+      // if movie displayed inside #movie1 is *MORE popular than in #movie2 
+         if (firstMovie.popularity > secondMovie.popularity) {
+            // unhide #clickResult>#correctAnswer to display answer on page
+            console.log('correct');
+            $('#answer').text('Correct!');
+         }else {if (firstMovie.popularity < secondMovie.popularity)
+            console.log('incorrect');
+            $('#answer').text('Incorrect!');
+         }
+      })
+      // when user clicks on #movie1
+      $('#movie2').on('click', function(){
+         // if movie displayed inside #movie1 is *MORE popular than in #movie2 
+            if (firstMovie.popularity < secondMovie.popularity) {
+               // unhide #clickResult>#correctAnswer to display answer on page
+               console.log('correct');
+               $('#answer').text('Correct!');
+            }else {if (firstMovie.popularity > secondMovie.popularity)
+               console.log('incorrect');
+               $('#answer').text('Incorrect!');
             }
-        })
-        // compare the movie the user selected to the movie determined to be more popular
-        // if user guessed right … do something
-        // else … do something else
-
-
-        // const toDisplay = () => {
-        // $('.movie1').click(function(){
-        //     $('.button').on('click', function(){
-        //     $(this).html()
-        //     })
-        //     })
-        // }
-
+         })  
     })
 }
-
+         //    if (selectedMovie === 'movie1' && firstMovie.popularity > secondMovie.popularity) {
+         //        console.log('yes!');
+         //    } else {
+         //        console.log('no');
+         //    }
 movieQuizApp.randomMovie = (array) => {
     const randomIndex = Math.floor(Math.random() * array.length);
     return array[randomIndex];
 }
+
+// Create init function that will kick off the app:
+movieQuizApp.init = () => {
+    movieQuizApp.getResults();
+}
+// Create document ready:
+$(document).ready(function () {
+    movieQuizApp.init();
+})
+
+
+
+/////////////////////////// Psuedo code
+// 
+// if user guessed right … do something
+// else … do something else
 // Create an if statement that prevents two movies with same title
 // let i = (res.title)
 // if (i === i) then run random movie again until result is different
@@ -97,12 +110,19 @@ movieQuizApp.randomMovie = (array) => {
 // Add points system & display final score
 // Display alert with final score
 // Find a way to make the app to continue indefinitely
+       
 
-// Create init function that will kick off the app:
-movieQuizApp.init = () => {
-    movieQuizApp.getResults();
-}
-// Create document ready:
-$(document).ready(function () {
-    movieQuizApp.init();
-})
+/////////////////////// MISC CODE SNIPPETS
+// 
+// const toDisplay = () => {
+        // $('.movie1').click(function(){
+        //     $('.button').on('click', function(){
+        //     $(this).html()
+        //     })
+        //     })
+        // }
+
+
+                    // console.log(buttonSelected.attr(‘id’))
+            // console.log(selectedMovie.attr('id'));
+            // console.log(movieQuizApp.selectedMovie.attr('id'));

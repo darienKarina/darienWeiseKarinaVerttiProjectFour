@@ -6,14 +6,12 @@
 // $shadows:#d3d3d3;
 
 // WRITE HERE
-    .wrapper {
-    margin: 10vh auto;
-    
-    }
+   .wrapper {
+   margin: 10vh auto;
+   }
 
     body {
     background-color: lightgray;
-    
     h1,
     footer {
         text-align: center;
@@ -23,15 +21,29 @@
     .movie {
     display: flex;
     justify-content: space-around;
+    height: 55vh;
     
-    .movie1,
-    .movie2 {
+      .movie1,
+      .movie2 {
         // background-color: darkcyan;
         width: 240px;
         height: 360px;
         margin: 5px 0;
+       }
+   }
+
+   .clickResult {
+      color: rgb(181, 14, 14);
+      font-weight: 700;
+      text-align: center;
+   }
+   
+    footer {
+       p {
+          font-size: 2rem;
+       }
     }
-    }
+
 
 
 
