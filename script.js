@@ -22,7 +22,7 @@ movieQuizApp.getResults = () => {
             page: 3,
          }
     }).then((res) => {
-       
+
       // Display 2 random movies generated from a random item function
 
       // Display random movie for left image from random item function
@@ -63,7 +63,7 @@ movieQuizApp.getResults = () => {
          // show if the user choice is correct or incorrect
             if (firstMovie.popularity < secondMovie.popularity) {
                $('#answer').text('Correct!');
-            }else {if (firstMovie.popularity > secondMovie.popularity)
+            } else {if (firstMovie.popularity > secondMovie.popularity)
                $('#answer').text('Incorrect!');
             }
          }) 
