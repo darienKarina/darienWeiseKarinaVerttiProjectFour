@@ -1,9 +1,4 @@
 @import "setup";
-// $headingFont: 'Shadows Into Light', cursive;
-// $baseFont: 'Gayathri', sans-serif;
-
-// $highlight: #89CFF0;
-// $shadows:#d3d3d3;
 
 // WRITE HERE
    .wrapper {
@@ -11,48 +6,58 @@
    }
 
    body {
-      background-color: lightgray;
+      background-color: #000;
+
       h1,
       footer {
+         color: #0026ff;
+         font-family: 'Lobster', cursive;
+         font-size: 5rem;
          text-align: center;
+         text-shadow: 0.8px 0.8px white;
       }
    }
 
    .movie {
    display: flex;
    justify-content: space-around;
-   height: 55vh;
-
+   // height: 55vh;
    .movie1,
    .movie2 {
       width: 240px;
-      height: 360px;
-      //  margin: 5px 0;
+      height: 360p;
+      margin-bottom: 3rem;
       text-align: center;
       }
       .movieButton {
          border: 0;
          margin-bottom: 15px;
-      }
-      
-         
+      }        
    }
-
+   
+.container {
+  text-align: center;
+}
    .clickResult {
-      color: rgb(181, 14, 14);
-      font-weight: 700;
+      color: #ffffff;
+      font-size: 4rem;
+      font-weight: bolder;
       text-align: center;
    }
    
    .refresh {
-      // border-style: none;
+      border-style: none;
       font-size: 1.6rem;
-      background-color: white;
-      padding: 5px;
+      background-color: #0026ff;
+      color: #FFF;
+      padding: 10px;
+      margin-top: 10px;
    }
 
 
    footer {
+      // display: flex;
+      // justify-content: center;
       p {
          font-size: 2rem;
       }

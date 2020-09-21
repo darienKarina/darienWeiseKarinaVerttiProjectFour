@@ -269,9 +269,10 @@ img {
 }
 
 body {
-  font-family: 'Gayathri', sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
   font-weight: lighter;
   font-size: calc(1.4rem + 1.4vw);
+  color: #FFF;
 }
 
 a {
@@ -284,12 +285,16 @@ a {
 }
 
 body {
-  background-color: lightgray;
+  background-color: #000;
 }
 
 body h1,
 body footer {
+  color: #0026ff;
+  font-family: 'Lobster', cursive;
+  font-size: 5rem;
   text-align: center;
+  text-shadow: 0.8px 0.8px white;
 }
 
 .movie {
@@ -298,13 +303,13 @@ body footer {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 55vh;
 }
 
 .movie .movie1,
 .movie .movie2 {
   width: 240px;
-  height: 360px;
+  height: 360p;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
@@ -313,26 +318,24 @@ body footer {
   margin-bottom: 15px;
 }
 
+.container {
+  text-align: center;
+}
+
 .clickResult {
-  color: #b50e0e;
-  font-weight: 700;
+  color: #ffffff;
+  font-size: 4rem;
+  font-weight: bolder;
   text-align: center;
 }
 
 .refresh {
+  border-style: none;
   font-size: 1.6rem;
-  background-color: white;
-  padding: 5px;
-}
-
-footer p {
-  font-size: 2rem;
-}
-
-.clickResult {
-  color: #b50e0e;
-  font-weight: 700;
-  text-align: center;
+  background-color: #0026ff;
+  color: #FFF;
+  padding: 10px;
+  margin-top: 10px;
 }
 
 footer p {
@@ -348,6 +351,13 @@ footer p {
 @media (max-width: 768px) {
   .wrapper {
     width: 85%;
+  }
+  .movie {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 

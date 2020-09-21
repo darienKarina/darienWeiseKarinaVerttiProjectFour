@@ -18,6 +18,8 @@ movieQuizApp.getResults = () => {
             sort_by: "popularity.desc",
             // Figure out how to get just one page
             page: 1,
+            page: 2,
+            page: 3
         }
     }).then((res) => {
         
