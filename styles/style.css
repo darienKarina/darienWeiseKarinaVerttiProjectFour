@@ -298,13 +298,35 @@ body footer {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  height: 55vh;
 }
 
 .movie .movie1,
 .movie .movie2 {
   width: 240px;
   height: 360px;
-  margin: 5px 0;
+  text-align: center;
+}
+
+.movie .movieButton {
+  border: 0;
+  margin-bottom: 15px;
+}
+
+.clickResult {
+  color: #b50e0e;
+  font-weight: 700;
+  text-align: center;
+}
+
+.refresh {
+  font-size: 1.6rem;
+  background-color: white;
+  padding: 5px;
+}
+
+footer p {
+  font-size: 2rem;
 }
 
 @media (max-width: 1120px) {
