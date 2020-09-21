@@ -329,6 +329,16 @@ footer p {
   font-size: 2rem;
 }
 
+.clickResult {
+  color: #b50e0e;
+  font-weight: 700;
+  text-align: center;
+}
+
+footer p {
+  font-size: 2rem;
+}
+
 @media (max-width: 1120px) {
   .wrapper {
     width: 85%;
