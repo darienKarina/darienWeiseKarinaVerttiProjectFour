@@ -67,8 +67,8 @@ movieQuizApp.getResults = () => {
         })  
         })
 
+      //  prevent two same movies from being populated at the same time.
         $( ".refresh" ).click(function() {
-            // set userAnswered to false
             location.reload();
         });
 
