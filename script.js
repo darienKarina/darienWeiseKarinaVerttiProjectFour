@@ -17,7 +17,6 @@ movieQuizApp.getResults = () => {
             api_key: movieQuizApp.key,
             language: "en-US",
             sort_by: "popularity.desc",
-            // Figure out how to get just one page
             page: 4,
         }
     }).then((res) => {
@@ -47,10 +46,10 @@ movieQuizApp.getResults = () => {
         $('#movie1').on('click', function(){
         // if movie displayed inside #movie1 is *MORE popular than in #movie2 
             if (firstMovie.popularity > secondMovie.popularity) {
-               $('#answer').text('Correct!');
+               $('#answer').text('CORRECT!');
                $('#movie1').css("border", "10px solid green");
             }else {if (firstMovie.popularity < secondMovie.popularity)
-               $('#answer').text('Incorrect!');
+               $('#answer').text('INCORRECT!');
                $('#movie1').css("border", "10px solid red");
             }
          })
@@ -58,10 +57,10 @@ movieQuizApp.getResults = () => {
         $('#movie2').on('click', function(){
            // if movie displayed inside #movie1 is *LESS popular than in #movie2 
             if (firstMovie.popularity < secondMovie.popularity) {
-               $('#answer').text('Correct!');
+               $('#answer').text('CORRECT!');
                $('#movie2').css("border", "10px solid green");
             }else {if (firstMovie.popularity > secondMovie.popularity)
-               $('#answer').text('Incorrect!');
+               $('#answer').text('INCORRECT!');
                $('#movie2').css("border", "10px solid red");
             }
         })
